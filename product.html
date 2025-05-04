@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title></title>
+  <title>The Product</title>
 
   <style>
     body {
@@ -117,37 +117,46 @@
   </nav>
 
   <main>
-    <article class="post">
+    <section class="section">
+  <h2>Key Features</h2>
+  <ul>
+    <li>📊 <strong>Gender Balance Insights</strong> – Understand gender distribution across departments and positions.</li>
+    <li>🔍 <strong>Inclusion Metrics</strong> – Spot gaps in representation and address potential biases.</li>
+    <li>📈 <strong>Visual Dashboards</strong> – Interactive charts and visuals that simplify complex data.</li>
+    <li>🧠 <strong>HR Data Integration</strong> – Import anonymized employee datasets with ease.</li>
+    <li>🔄 <strong>Scenario Exploration</strong> – Simulate changes and see projected impacts on diversity.</li>
+  </ul>
+</section>
 
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
+<section class="section">
+  <h2>Why It Matters</h2>
+  <p>Gender equality and inclusion are not just buzzwords — they’re strategic imperatives for modern companies.</p>
+  <p>Our dashboard turns broad diversity goals into measurable progress by providing transparency, data clarity, and actionable recommendations for HR teams.</p>
+</section>
 
-  <div class="post-content">
-    <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<h2 id="dashboard-preview">Dashboard Preview</h2>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="slideshow-container">
+  <img class="slide" src="/images/page1.png" style="display:block;" />
+  <img class="slide" src="/images/page2.png" style="display:none;" />
+  <img class="slide" src="/images/page3.png" style="display:none;" />
+  <img class="slide" src="/images/page4.png" style="display:none;" />
+  <img class="slide" src="/images/page5.png" style="display:none;" />
 </div>
 
-  </div>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
 
-</article>
+  function showSlides() {
+    slides.forEach((s, i) => s.style.display = i === slideIndex ? 'block' : 'none');
+    slideIndex = (slideIndex + 1) % slides.length;
+    setTimeout(showSlides, 2500); // 2.5 seconds
+  }
+
+  document.addEventListener("DOMContentLoaded", showSlides);
+</script>
+
 
   </main>
 
